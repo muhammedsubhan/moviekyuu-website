@@ -6,10 +6,10 @@ const Header = () => {
       <div className="bg-gradient-to-r w-full from-violet-500 to-fuchsia-500 h-3/5 flex items-center justify-center flex-col">
         <div>
           <h1 className="text-6xl text-white font-medium mb-7 ">
-            Welcome to{" "}
+            Welcome to
             <span className="animate-bounce inline-block transition-all">
               🎬
-            </span>{" "}
+            </span>
             MovieKyuu
           </h1>
           <h4 className="text-2xl font-normal text-white">
