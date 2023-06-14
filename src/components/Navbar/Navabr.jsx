@@ -5,7 +5,7 @@ import Search from "../search/Search";
 const Navabr = () => {
   return (
     <>
-      <div className="flex items-center justify-between nav-border mb-2">
+      <div className="flex items-center justify-between nav-border mb-2 ">
         <div className="ml-20 font-display hidden md:flex p-3">
           <Link to="/" className="mr-6 flex items-center space-x-2">
             <div className="flex flex-row flex-nowrap items-center gap-2 md:-ml-12">
