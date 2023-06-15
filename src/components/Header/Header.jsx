@@ -1,9 +1,10 @@
 import React from "react";
+import CardContainer from "../CardContaniner/CardContainer";
 
 const Header = () => {
   return (
     <>
-      <div className="bg-gradient-to-r w-full from-violet-500 to-fuchsia-500 h-3/5 flex items-center justify-center flex-col">
+      <div className="bg-gradient-to-r from-violet-500 to-fuchsia-500 h-3/5 flex items-center justify-center flex-col">
         <div>
           <h1 className="text-6xl text-white font-medium mb-7 ">
             Welcome to{" "}
@@ -20,6 +21,7 @@ const Header = () => {
           </button>
         </div>
       </div>
+      <CardContainer />
     </>
   );
 };
