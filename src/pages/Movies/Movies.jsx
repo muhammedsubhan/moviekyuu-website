@@ -102,6 +102,8 @@ const Movies = () => {
       const data = await res.json();
 
       setAllMovies(data.results);
+
+      
     };
 
     getAllMovies();
@@ -148,9 +150,9 @@ const Movies = () => {
           </div>
         </aside>
 
-        <div className="text-white px-10 flex flex-wrap gap-10">
-          {allMovies?.map((movie, index) => {
-            return <MoviesCard key={index} data={movie} />;
+        <div className="text-white px-10 flex flex-wrap gap-10" >
+          {allMovies?.map((movie) => {
+            return <MoviesCard key={movie.id} data={movie} />;
           })}
         </div>
       </div>

@@ -7,6 +7,7 @@ import Movies from "./pages/Movies/Movies";
 import MyList from "./pages/MyList/MyList";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
+import Search from "./components/search/Search";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/movie" element={<Movies />} />
           <Route path="/my-list" element={<MyList />} />
           <Route path="/about" element={<About />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
         <Footer />
       </div>

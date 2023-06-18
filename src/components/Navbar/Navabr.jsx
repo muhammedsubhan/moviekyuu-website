@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Search from "../search/Search";
+// import Search from "../search/Search";
 
 const Navabr = () => {
   return (
@@ -30,7 +30,13 @@ const Navabr = () => {
               </Link>
             </nav>
           </div>
-          <Search />
+          {/* <Search /> */}
+          <Link
+            to="/search"
+            className="text-white hover:text-gray-300 px-10 text-sm font-medium"
+          >
+            <h3>Search</h3>
+          </Link>
         </div>
       </div>
     </>
