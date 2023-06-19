@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import MoviesCard from "../MoviesCard/MoviesCard";
 import { options } from "../../components/Api/Api";
 
-const Movies = () => {
+const Movies = ({ liftMoviesDetails }) => {
   const [allMovies, setAllMovies] = useState([]);
 
   const [pageNumber, setPageNumber] = useState(1);
@@ -102,8 +102,6 @@ const Movies = () => {
       const data = await res.json();
 
       setAllMovies(data.results);
-
-      
     };
 
     getAllMovies();
@@ -150,9 +148,16 @@ const Movies = () => {
           </div>
         </aside>
 
-        <div className="text-white px-10 flex flex-wrap gap-10" >
+        <div className="text-white px-10 flex flex-wrap gap-10">
           {allMovies?.map((movie) => {
-            return <MoviesCard key={movie.id} data={movie} />;
+            return (
+              <MoviesCard
+                key={movie.id}
+                data={movie}
+                liftMoviesDetails={liftMoviesDetails}
+                
+              />
+            );
           })}
         </div>
       </div>

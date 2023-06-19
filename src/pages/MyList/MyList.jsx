@@ -4,7 +4,7 @@ import MyListMovies from "../../components/MyListMovies/MyListMovies";
 const MyList = () => {
   return (
     <>
-      <div className="text-white h-fit		">
+      <div className="text-white h-fit">
         <div className="flex justify-center  mt-6 ">
           <h1 className="border-b border-gray-700 text-4xl font-semibold py-1">
             My List
