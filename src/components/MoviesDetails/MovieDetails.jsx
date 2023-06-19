@@ -45,6 +45,9 @@ const MovieDetails = ({ moviesDetails }) => {
 
   // console.log(castList);
 
+  console.log(movieCast);
+  console.log(youtubeVideo);
+
   return (
     <>
       <div className="text-white min-h-screen ">
