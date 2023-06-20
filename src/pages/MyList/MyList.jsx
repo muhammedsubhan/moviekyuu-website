@@ -12,11 +12,11 @@ const MyList = () => {
 
   useEffect(() => {
     dispatch(getList());
-  }, []);
+  }, [dispatch]);
 
   const handleClear = () => {
-    dispatch(clearList())
-  }
+    dispatch(clearList());
+  };
 
   return (
     <>

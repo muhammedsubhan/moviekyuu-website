@@ -48,8 +48,8 @@ const MovieDetails = ({ moviesDetails }) => {
 
   // console.log(castList);
 
-  // console.log(movieCast);
-  // console.log(youtubeVideo);
+  console.log(movieCast);
+  console.log(youtubeVideo);
 
   const handleAddToFav = () => {
     dispatch(addList(moviesDetails));
