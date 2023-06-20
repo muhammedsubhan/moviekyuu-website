@@ -3,17 +3,20 @@ import { Link } from "react-router-dom";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { options } from "../Api/Api";
+import { useDispatch } from "react-redux";
+import { addList } from "../ReduxToolkit/ListSlice";
 
 const MovieDetails = ({ moviesDetails }) => {
   const [youtubeVideo, setYoutubeVideo] = useState([]);
   const [movieCast, setMovieCast] = useState([]);
+  // const [myList, setMyList] = useState([]);
+
+  const dispatch = useDispatch();
 
   const baseurl_backdrop =
     "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/";
   const baseURL = "https://image.tmdb.org/t/p/w500/";
   const imdb_url = `https://www.imdb.com/title/${moviesDetails.imdb_id}/`;
-
-  // console.log("movie Details", moviesDetails);
 
   useEffect(() => {
     const youtubeVideo = async () => {
@@ -45,9 +48,15 @@ const MovieDetails = ({ moviesDetails }) => {
 
   // console.log(castList);
 
-  console.log(movieCast);
-  console.log(youtubeVideo);
+  // console.log(movieCast);
+  // console.log(youtubeVideo);
 
+  const handleAddToFav = () => {
+    dispatch(addList(moviesDetails));
+    // setMyList([...myList, moviesDetails]);
+  };
+
+  // console.log(myList);
   return (
     <>
       <div className="text-white min-h-screen ">
@@ -122,7 +131,10 @@ const MovieDetails = ({ moviesDetails }) => {
                   IMDB
                 </Link>
               </div>
-              <button className="text-gray-900 font-normal text-base px-8 py-2 bg-white hover:bg-gray-300 rounded-lg">
+              <button
+                className="text-gray-900 font-normal text-base px-8 py-2 bg-white hover:bg-gray-300 rounded-lg"
+                onClick={handleAddToFav}
+              >
                 Add to Favorite
               </button>
             </div>
